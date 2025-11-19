@@ -48,11 +48,11 @@ if active_image is not None:
 
         outlier, mse = check_image_is_outlier(
             np_image,
-            "model_path\autoencoder_200.keras",
-            "model_path\threshold.txt"
+            "model_path/autoencoder_200.keras",
+            "model_path/threshold.txt"
         )
 
-        with open("model_path\threshold.txt", "r") as f:
+        with open("model_path/threshold.txt", "r") as f:
             threshold = float(f.read().strip())
 
         st.write(f"Outlier: {outlier}")

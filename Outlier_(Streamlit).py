@@ -29,9 +29,9 @@ if st.button("Load random image"):
         st.session_state.random_image = None
 
 # Determine active image
-raw_image = st.file_uploader("Upload image", type=["png"])
+raw_image = st.file_uploader("Upload anomaly image", type=["png"])
 st.caption("(Must be .png)")
-
+st.warning('Blurring will only happen when anomaly is detected')
 active_image = None
 
 if raw_image is not None:
